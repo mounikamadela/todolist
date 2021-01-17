@@ -60,6 +60,7 @@
       function prepareTask(taskId, taskName, description, date) {
         const newItem = document.createElement("div");
         newItem.setAttribute("id", "d" + taskId);
+        newItem.setAttribute("class", "divtask");
 
         const taskHtml =
           "<div task-name><input type=checkbox id=" +
@@ -114,11 +115,23 @@
       }
     </script>
     <style>
-      .header {
-        padding: 10px;
-        margin-left: 20px;
-        text-align: centre;
-        font-size: 24px;
+        .header {
+        padding: 30px 0px;
+        margin: 15px;
+   		background: #8FBC8F;
+  		text-align: center;
+        font-size: 30px;
+      }
+      .logout{
+      	background:lightgrey;
+      	padding:0px 20px;
+      	margin:15px;
+      	text-align: right;
+      }
+      .divtask{
+      	background:#F0F0F0;
+      	padding:10px 20px;
+      	margin:5px;
       }
       .app {
         float: center;
@@ -159,7 +172,18 @@
   </head>
   <body>
     <div class="header">To do list</div>
+    <div class="logout">
+     <a href="/logout" /><B>Logout</B></a>
+     </div>
     <div class="app">
+    
+       <div id="list"></div>
+      <br />
+      <input type="button" value="Remove item(s)" onclick="removeItem();" />
+      <br />
+      <br />
+      <br />
+      <br />
       <label new-task>Name: </label
       ><input type="text" id="newTaskName" value="" size="50" />
       <br />
@@ -170,15 +194,12 @@
       <br />
 
       <br />
-      <div id="list"></div>
-      <br />
-      <input type="button" value="Remove item(s)" onclick="removeItem();" />
+
     </div>
 
     <script>
       loadList();
     </script>
     
-     <a href="/todolist/logout" /><B>Logout</B></a>
   </body>
 </html>
