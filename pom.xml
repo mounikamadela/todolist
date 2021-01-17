@@ -11,6 +11,7 @@
 	<groupId>com.deloitte</groupId>
 	<artifactId>todolist</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>todolist</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -54,11 +55,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-		    <groupId>org.apache.tomcat</groupId>
-		    <artifactId>jasper</artifactId>
-		    <version>6.0.53</version>
-		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -67,6 +64,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
@@ -76,6 +74,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>todolist</finalName>
 	</build>
 
 </project>

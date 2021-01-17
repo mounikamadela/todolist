@@ -3,9 +3,9 @@
   <head>
     <title>To-Do List App</title>
     <script>
-      const addTaskUrl = "/saveTask";
-      const removeTaskUrl = "/removeTask";
-      const LoadTasksUrl = "/getAllTasks";
+      const addTaskUrl = "/todolist/saveTask";
+      const removeTaskUrl = "/todolist/removeTask";
+      const LoadTasksUrl = "/todolist/getAllTasks";
 
       function getUserId() {
         return "user1";
@@ -179,6 +179,6 @@
       loadList();
     </script>
     
-     <a href="/logout" /><B>Logout</B></a>
+     <a href="/todolist/logout" /><B>Logout</B></a>
   </body>
 </html>
